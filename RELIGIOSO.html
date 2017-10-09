@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="fonts.css">
+    <link rel="icon" href="img/icono.ico">
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="main.js"></script>
+        <script src="JS/jquery-3.2.1.js"></script>
+    <div class="menu_bar">
+			<a href="index.html" class="bt-menu"><span class="icon-list2"></span>Menú</a>
+		</div>
+    		<nav>
+                 <ul>
+              <li><a href="index.html"><i class="icon icon-inicio"></i>Inicio</a></li>
+	      <li class="submenu"><a href="proyectos.html"><span class="segundo"><i class="icon icon-proyecto"></i></span>Proyectos</a>
+                <ul class="children">
+		<li><a href="CPU.html"><i class="icon-proyecto"></i>CPU </a></li>
+		<li><a href="MONITOR.html">Monitor</a></li>
+                <li><a href="USB.html">USB</a></li>
+		<li><a href="PORTATILES.html">Portatiles</a></li>
+                <li><a href="DISCODURO.html">Disco Duro</a></li>
+                <li><a href="PROGRAMAS.html">Programas</a></li>
+                <li><a href="CELULARES.html">Celulares</a></li>
+                <li><a href="SEMAFOROS.html">Semaforo</a></li>
+                </ul>
+		</li>
+              <li class="submenu"><a href="#"><span class="tercero"><i class="icon icon-comunidad"></i></span>Comunidad</a>  
+                  <ul class="children">
+		<li><a href="CULTURAL.html">Cultural </a></li>
+		<li><a href="SOCIAL.html">Social</a></li>
+                <li><a href="DEPORTIVO.html">Deportiva</a></li>
+		<li><a href="RELIGIOSO.html">Religiosa</a></li>
+                </ul>
+		</li>
+		<li><a href="novedades.html"><span class="cuarto"><i class="icon icon-novedad"></i></span>Novedades</a></li>
+		<li><a href="institucion.html"><span class="quinto"><i class="icon icon-instituto"></i></span>Institucion</a></li>
+            </ul>
+		</nav>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Documento sin t&iacute;tulo</title>
+<style>
+h1{
+	text-align:center;
+}
+p{
+	font-size:18px;
+	font-family:Verdana, Geneva, sans-serif;
+	text-align:justify;
+}
+#links {	
+	width: 20%;
+	margin-left:45px;
+	border:dashed #0000FF 2px;
+	float:left;
+	padding-bottom:200px;
+	padding-left:20px;
+}
+#links h2{
+	text-align:center;
+}
+#ultimos{	
+	width:75%;
+	float:left;
+}
+li{
+	font-weight:bold;
+	font-size:18px;
+}
+</style>
+<script src="js/jquery-3.2.1.js"></script>
+<script>
+$(document).ready(function(){
+	$("h1").dblclick(function(){
+			alert ("Mensaje");
+			});
+	$("a").mouseover(function(){
+		var mensaje="<p>Pasate por encima del link</p>"
+		$("#principal").append(mensaje);
+	});
+	$("#el_boton").focus(function(){
+		$(this).val("mensaje");
+	});
+	$("#el_campo").focus(function(){
+		$(this).val("wilmer guzman jara");
+	});
+});
+</script>
+
+</head>
+<body>
+	<div id= "principal">
+	<h1>Introduccion a eventos  jQuery mouseover () Método </h1>
+        <h2>Definición y uso
+
+El evento mouseover se produce cuando el puntero del mouse está sobre el elemento seleccionado.
+
+El método mouseover () activa el evento mouseover o asigna una función para ejecutarse cuando se produce un evento mouseover</h2>
+	<p> <a href = "#" >Un link</a> </p>
+	<form action="#" method="get">
+		<fieldset><legend>Formulario</legend><p>
+			<input type= "button" name"button" id="el_boton" value= "Un boton" ></p>
+		<p> <input name= "textfield" type"text" id="el_campo" ></p>
+		</fieldset>
+		</form>
+</body>
+</html>

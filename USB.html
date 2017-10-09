@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="fonts.css">
+    <link rel="icon" href="img/icono.ico">
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="main.js"></script>
+        <script src="JS/jquery-3.2.1.js"></script>
+    <div class="menu_bar">
+			<a href="index.html" class="bt-menu"><span class="icon-list2"></span>Menú</a>
+		</div>
+    		<nav>
+                 <ul>
+              <li><a href="index.html"><i class="icon icon-inicio"></i>Inicio</a></li>
+	      <li class="submenu"><a href="proyectos.html"><span class="segundo"><i class="icon icon-proyecto"></i></span>Proyectos</a>
+                <ul class="children">
+		<li><a href="CPU.html"><i class="icon-proyecto"></i>CPU </a></li>
+		<li><a href="MONITOR.html">Monitor</a></li>
+                <li><a href="USB.html">USB</a></li>
+		<li><a href="PORTATILES.html">Portatiles</a></li>
+                <li><a href="DISCODURO.html">Disco Duro</a></li>
+                <li><a href="PROGRAMAS.html">Programas</a></li>
+                <li><a href="CELULARES.html">Celulares</a></li>
+                <li><a href="SEMAFOROS.html">Semaforo</a></li>
+                </ul>
+		</li>
+              <li class="submenu"><a href="#"><span class="tercero"><i class="icon icon-comunidad"></i></span>Comunidad</a>  
+                  <ul class="children">
+		<li><a href="CULTURAL.html">Cultural </a></li>
+		<li><a href="SOCIAL.html">Social</a></li>
+                <li><a href="DEPORTIVO.html">Deportiva</a></li>
+		<li><a href="RELIGIOSO.html">Religiosa</a></li>
+                </ul>
+		</li>
+		<li><a href="novedades.html"><span class="cuarto"><i class="icon icon-novedad"></i></span>Novedades</a></li>
+		<li><a href="institucion.html"><span class="quinto"><i class="icon icon-instituto"></i></span>Institucion</a></li>
+            </ul>
+		</nav>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>CLASE HOVER</title>
+<style>
+img{
+    padding:20px;
+	width:100px;
+}
+
+#men {	
+	width: 20%;
+	background-color:#0C0;
+    border: dotted 4px #000000;
+	font-size:20px;
+	margin-left:20px;
+
+}
+</style>
+<script src="js/jquery-3.2.1.js"></script>
+<script>
+/*$(document).ready(function(){
+     $("#men").hide();
+	  $("#foto1").hover
+	  (function(){
+	  $("#men").show();}
+	  ,function(){
+	    $("#men").hide();}
+   );
+   }); */
+   
+   $(document).ready(function(){
+     $("#men").hide();
+	  $("#foto1").hover(menon,menoff);
+	  });
+	  function menon(){
+	  $("#men").show();
+	  }
+	  function menoff(){
+	    $("#men").hide();
+		}
+
+ $(document).ready(function(){
+	  	  var elementos=document.querySelectorAll("img")
+	 for(var i=0;i<elementos.length;i++){
+		elementos[i].addEventListener("mouseover",cambiar,false);
+		elementos[i].addEventListener("mouseout",volver,false);
+		}
+	});
+function cambiar(e){
+if(e.target==foto6){
+	$("#foto2").attr("src","imgaes/foto1.jpg");
+	}
+}
+function volver(e){
+if(e.target==foto2){
+	$("#foto1").attr("src","images/foto4.jpg");
+	}
+}
+$(document).ready(function(){
+	  $("#foto3").hover(cam);
+	  });
+	  function cam(){
+   $("#foto3").each(function(){
+     $(this).fadeOut(1000).fadeIn(1000).width("320");
+     });
+      }
+ $(document).ready(function(){
+	  $("#foto4").hover(mas,menos);
+	  });
+	  function mas(){
+	 $("#foto4").css("width","360");
+}
+	  function menos(){
+	  $("#foto4").css("width","200");
+	  }
+ 
+</script>
+</head>
+    <h1>.hover.-</h1><h3>Vincule uno o dos manejadores a los elementos coincidentes, para que se ejecuten cuando el puntero del ratón entre y salga de los elementos.
+Contenido:
+
+    .hover (handlerIn, handlerOut)
+        .hover (handlerIn, handlerOut) 
+    .hover (handlerInOut)
+        .hover (handlerInOut) </h3>
+    <h1>Métodos de desvanecimiento jQuery</h1><h2>
+
+Con jQuery puedes atenuar un elemento dentro y fuera de la visibilidad.
+
+jQuery tiene los siguientes métodos de fade:
+
+    fundirse()
+    fadeOut ()
+    fadeToggle ()
+    desvanecerse hacia() </h2>
+<body>
+<div id="foto">
+<img src="images/foto3.jpg" width="200" id="foto1">
+
+<img src="images/foto7.jpg" width="200" id="foto3">
+<img src="images/5.jpg" width="200" id="foto4">
+</div>
+<div id="men">RATON SOBRE LA FOTO 1 </div>
+
+</body>
+</html>

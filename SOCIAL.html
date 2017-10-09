@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="fonts.css">
+    <link rel="icon" href="img/icono.ico">
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="main.js"></script>
+        <script src="JS/jquery-3.2.1.js"></script>
+    <div class="menu_bar">
+			<a href="index.html" class="bt-menu"><span class="icon-list2"></span>Menú</a>
+		</div>
+    		<nav>
+                 <ul>
+              <li><a href="index.html"><i class="icon icon-inicio"></i>Inicio</a></li>
+	      <li class="submenu"><a href="proyectos.html"><span class="segundo"><i class="icon icon-proyecto"></i></span>Proyectos</a>
+                <ul class="children">
+		<li><a href="CPU.html"><i class="icon-proyecto"></i>CPU </a></li>
+		<li><a href="MONITOR.html">Monitor</a></li>
+                <li><a href="USB.html">USB</a></li>
+		<li><a href="PORTATILES.html">Portatiles</a></li>
+                <li><a href="DISCODURO.html">Disco Duro</a></li>
+                <li><a href="PROGRAMAS.html">Programas</a></li>
+                <li><a href="CELULARES.html">Celulares</a></li>
+                <li><a href="SEMAFOROS.html">Semaforo</a></li>
+                </ul>
+		</li>
+              <li class="submenu"><a href="#"><span class="tercero"><i class="icon icon-comunidad"></i></span>Comunidad</a>  
+                  <ul class="children">
+		<li><a href="CULTURAL.html">Cultural </a></li>
+		<li><a href="SOCIAL.html">Social</a></li>
+                <li><a href="DEPORTIVO.html">Deportiva</a></li>
+		<li><a href="RELIGIOSO.html">Religiosa</a></li>
+                </ul>
+		</li>
+		<li><a href="novedades.html"><span class="cuarto"><i class="icon icon-novedad"></i></span>Novedades</a></li>
+		<li><a href="institucion.html"><span class="quinto"><i class="icon icon-instituto"></i></span>Institucion</a></li>
+            </ul>
+		</nav>
+<meta charset="utf-8">
+<title>Bind</title>
+<style>
+table{
+	text-align:center;
+	float:right;
+	margin-right:50px;
+}
+p{
+	font-size:1.3em;
+}
+#imagen_grande {
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left:0;
+	right:0;
+	width: 700px;
+	height: 465px;
+	border:solid 5px #09C;
+	box-shadow:1px 1px 100px #6F9;
+}
+</style>
+<script src="JS/jQuery1.6.3.js"></script>
+<script src="JS/jquery-3.2.1.js"></script>
+<script>
+ $(document).ready(function(){
+	 var imagen=$("#imagen1").attr("src");
+	   $("#imagen_grande").hide();
+	  $("#imagen1").bind("click",imagen,abreimagen);
+	  });
+function abreimagen(e){
+e.stopPropagation();
+$("#imagen_grande").fadeIn(1000);
+$("#img_sustitucion").replaceWith("<IMG src= '" + e.data + "'width='700' heigth='466'>")
+}
+$(document).bind("click keypress", function (){
+	$("#imagen_grande").fadeOut(1000);
+});
+</script>
+</head>
+<body>
+<div id="imagen_grande"><IMG src="" id="img_sustitucion"></div>
+
+<p>:::::::::::.replaceWith (newContent) Descripción::::::::::::::::: Sustituya cada elemento del conjunto de elementos coincidentes con el nuevo contenido proporcionado y devuelva el conjunto de elementos que se eliminó.
+
+    versión añadida: 1.2 .replaceWith (newContent)
+        nuevo contenido
+        Tipo: htmlString o Element o Array o jQuery
+        El contenido a insertar. Puede ser una cadena HTML, un elemento DOM, una matriz de elementos DOM o un objeto jQuery. 
+    versión añadida: 1.4 .replaceWith (función)
+        función
+        Tipo: Función ()
+        Función que devuelve el contenido con el que reemplazar el conjunto de elementos coincidentes. 
+
+El método .replaceWith() elimina el contenido del DOM e inserta el nuevo contenido en su lugar con una sola llamada. .</p>
+
+<p>Docente: Ing. Freddy Leon       Alumno: Wilmer Guzman Jara               Ciclo:4to.</p>
+<table border="0">
+  <tr>
+    <td><IMG src="images/5.jpg" width="150" height="100" id="imagen1"></td>
+  </tr>
+</table>
+<p>tas adicionales:
+
+    El método .replaceWith() elimina todos los controladores de datos y eventos asociados con los nodos eliminados.
+    Antes de jQuery 1.9, .replaceWith() intentaría agregar o cambiar nodos en el conjunto jQuery actual si el primer nodo del conjunto no estaba conectado a un documento y en esos casos devolver un nuevo conjunto jQuery en lugar del conjunto original. ¡El método puede o no haber devuelto un nuevo resultado dependiendo del número o la conexión de sus argumentos! A partir de jQuery 1.9, .after() , .before() y .replaceWith() devuelven siempre el conjunto original no modificado. Intentar utilizar estos métodos en un nodo sin un padre no tiene ningún efecto, es decir, ni el conjunto ni los nodos que contiene se cambian. </p>
+
+
+</body>
+</html>

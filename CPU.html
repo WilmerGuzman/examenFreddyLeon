@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="fonts.css">
+    <link rel="icon" href="img/icono.ico">
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="main.js"></script>
+        <script src="JS/jquery-3.2.1.js"></script>
+    <div class="menu_bar">
+			<a href="index.html" class="bt-menu"><span class="icon-list2"></span>Menú</a>
+		</div>
+    		<nav>
+                 <ul>
+              <li><a href="index.html"><i class="icon icon-inicio"></i>Inicio</a></li>
+	      <li class="submenu"><a href="proyectos.html"><span class="segundo"><i class="icon icon-proyecto"></i></span>Proyectos</a>
+                <ul class="children">
+		<li><a href="CPU.html"><i class="icon-proyecto"></i>CPU </a></li>
+		<li><a href="MONITOR.html">Monitor</a></li>
+                <li><a href="USB.html">USB</a></li>
+		<li><a href="PORTATILES.html">Portatiles</a></li>
+                <li><a href="DISCODURO.html">Disco Duro</a></li>
+                <li><a href="PROGRAMAS.html">Programas</a></li>
+                <li><a href="CELULARES.html">Celulares</a></li>
+                <li><a href="SEMAFOROS.html">Semaforo</a></li>
+                </ul>
+		</li>
+              <li class="submenu"><a href="#"><span class="tercero"><i class="icon icon-comunidad"></i></span>Comunidad</a>  
+                  <ul class="children">
+		<li><a href="CULTURAL.html">Cultural </a></li>
+		<li><a href="SOCIAL.html">Social</a></li>
+                <li><a href="DEPORTIVO.html">Deportiva</a></li>
+		<li><a href="RELIGIOSO.html">Religiosa</a></li>
+                </ul>
+		</li>
+		<li><a href="novedades.html"><span class="cuarto"><i class="icon icon-novedad"></i></span>Novedades</a></li>
+		<li><a href="institucion.html"><span class="quinto"><i class="icon icon-instituto"></i></span>Institucion</a></li>
+            </ul>
+		</nav>
+</head>
+<meta charset="utf-8">
+<title>galeria</title>
+<h1>mouseover y mouseout</h1>
+<h3>
+El evento mouseover se activa cuando el usuario mueve el mouse sobre un elemento. El evento mouseout se activa cuando el usuario mueve el ratón fuera de un elemento. Por desgracia, estos eventos burbuja.
+
+ratón sobre
+Se activa cuando el usuario mueve el mouse sobre el elemento en el que registró el evento o uno de sus descendientes .
+despliegue de mouse
+Se dispara cuando el usuario mueve el ratón fuera del elemento en el que registró el evento o uno de sus descendientes .
+ratón y mouseleave
+Similar a mouseover y mouseout, pero estos eventos no burbuja.</h3>
+<style>
+	table{
+		text-align:center;
+		width:50%;
+		border:none;
+		margin:auto;
+		}
+	img{
+		padding:0 5px;
+		}
+</style>
+<script src="JS/jquery-3.2.1.js"></script>
+<script>
+$(document).ready(function(){
+	var elementos=document.querySelectorAll("img")
+	for(var i=0;i<elementos.length;i++){
+		elementos[i].addEventListener("mouseover",cambiar,false);
+		elementos[i].addEventListener("mouseout",cambiar2,false);
+		}
+	});
+function cambiar(e){
+if(e.target==foto1){
+	$("#foto1").attr("src","img/CPU1.jpg");
+	}else if(e.target==foto2){
+	$("#foto2").attr("src","img/CPU2.jpg");
+	}else if(e.target==foto3){
+	$("#foto3").attr("src","img/CPU3.jpg");
+	}else if(e.target==foto4){
+	$("#foto4").attr("src","img/CPU4.jpg");
+	}
+}
+function cambiar2(e){
+if(e.target==foto1){
+	$("#foto1").attr("src","img/CPU5.jpg");
+	}else if(e.target==foto2){
+	$("#foto2").attr("src","img/CPU6.jpg");
+	}else if(e.target==foto3){
+	$("#foto3").attr("src","img/CPU7.jpg");
+	}else if(e.target==foto4){
+	$("#foto4").attr("src","img/CPU8.jpg");
+	}
+}
+</script>
+
+<body>
+<table width="100%" border="0">
+	<tr>
+    	<td><img src="img/CPU1.jpg" width="300" id="foto1"></td>
+        <td><img src="img/CPU2.jpg" width="300" id="foto2"></td>
+        <td><img src="img/CPU3.jpg" width="300" id="foto3"></td>
+        <td><img src="img/CPU4.jpg" width="300" id="foto4"></td>
+    </tr>
+</table>
+
+</body>
+</html>
