@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="fonts.css">
+    <link rel="icon" href="img/icono.ico">
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="main.js"></script>
+        <script src="JS/jquery-3.2.1.js"></script>
+    <div class="menu_bar">
+			<a href="index.html" class="bt-menu"><span class="icon-list2"></span>Menú</a>
+		</div>
+    		<nav>
+                 <ul>
+              <li><a href="index.html"><i class="icon icon-inicio"></i>Inicio</a></li>
+	      <li class="submenu"><a href="proyectos.html"><span class="segundo"><i class="icon icon-proyecto"></i></span>Proyectos</a>
+                <ul class="children">
+		<li><a href="CPU.html"><i class="icon-proyecto"></i>CPU </a></li>
+		<li><a href="MONITOR.html">Monitor</a></li>
+                <li><a href="USB.html">USB</a></li>
+		<li><a href="PORTATILES.html">Portatiles</a></li>
+                <li><a href="DISCODURO.html">Disco Duro</a></li>
+                <li><a href="PROGRAMAS.html">Programas</a></li>
+                <li><a href="CELULARES.html">Celulares</a></li>
+                <li><a href="SEMAFOROS.html">Semaforo</a></li>
+                </ul>
+		</li>
+              <li class="submenu"><a href="#"><span class="tercero"><i class="icon icon-comunidad"></i></span>Comunidad</a>  
+                  <ul class="children">
+		<li><a href="CULTURAL.html">Cultural </a></li>
+		<li><a href="SOCIAL.html">Social</a></li>
+                <li><a href="DEPORTIVO.html">Deportiva</a></li>
+		<li><a href="RELIGIOSO.html">Religiosa</a></li>
+                </ul>
+		</li>
+		<li><a href="novedades.html"><span class="cuarto"><i class="icon icon-novedad"></i></span>Novedades</a></li>
+		<li><a href="institucion.html"><span class="quinto"><i class="icon icon-instituto"></i></span>Institucion</a></li>
+            </ul>
+		</nav>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<style>
+
+.programades{
+	background-color:#F00;
+	font-size:40px;
+	
+}
+a{
+	display:block;
+	margin-bottom:20px;
+	font-size:24px;
+}
+table{
+	text-align:center;
+	border:none;
+}
+
+td{
+	border:none;
+}
+
+#enlaces {
+	position: absolute;
+	left: 31px;
+	top: 65px;
+	width: 400px;
+	height: 649px;
+	z-index: 1;
+	padding-top:100px;
+}
+</style>
+<script src="JS/jquery-3.2.1.js"></script>
+
+
+<script>
+$(document).ready(function() {
+    /*$("a[href^='https://']").addClass("programades");*/
+	document.getElementById("programas").addEventListener("click",resaltar,false);
+	document.getElementById("externos").addEventListener("click",quitar,false);
+	document.getElementById("OTROS").addEventListener("click",OTROS,false);
+});
+function resaltar(){
+	$(".programas").addClass("programades");
+	$(".externos").removeClass("programades");
+	$(".otros").removeClass("programades");
+	}
+function quitar(){
+	$(".externos").addClass("programades");
+	$(".otros").removeClass("programades");
+	$(".programas").removeClass("programades")
+	}
+function OTROS(){
+	$(".otros").addClass("programades");
+	$(".programas").removeClass("programades");
+	$(".externos").removeClass("programades")
+	}
+
+</script>
+</head>
+<h3>El método removeEventListener () para quitar un controlador de eventos que se ha adjuntado con el método addEventListener ().
+
+Consejo: utilice el método document.addEventListener () para adjuntar un controlador de eventos al documento. </h3>
+<body>
+<div id="enlaces">
+    <br>
+    <br>
+<a href="http://felcastro84.wixsite.com/leon" target="_blank" class="programas">
+HLEON
+</a><br>
+<a href="http://www.google.com" target="_blank" class="externos">
+Google
+</a><br>
+<a href="https://www.youtube.com/channel/UCvkMduz9XHbuupcqm_X9_Iw" target="_blank" class="programas">
+HLeon YouTube
+</a><br>
+<a href="eliminar.html" target="_blank" class="otros">
+Eliminar
+</a><br>
+<a href="https://www.facebook.com/HLEON-768643163174625/" target="_blank" class="externos">
+Noticias google
+</a><br>
+<a href="jquery1.html" target="_blank" class="otros" >
+jquery1
+</a>
+</div>
+<table width="100%" border="1">
+<tr>
+<td>programas&nbsp;<input type="button" value="NADA" id="programas"></td>
+<td>otros&nbsp;<input type="button"  value="JQUERY Y ELIMINAR" id="OTROS"></td>
+<td>externos&nbsp;<input type="button"  value="GOOGLE Y NOTICIAS GOOGLE" id="externos"></td>
+</tr>
+</body>
+</html>

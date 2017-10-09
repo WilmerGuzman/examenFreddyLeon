@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="fonts.css">
+    <link rel="icon" href="img/icono.ico">
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="main.js"></script>
+        <script src="JS/jquery-3.2.1.js"></script>
+    <div class="menu_bar">
+			<a href="index.html" class="bt-menu"><span class="icon-list2"></span>Menú</a>
+		</div>
+    		<nav>
+                 <ul>
+              <li><a href="index.html"><i class="icon icon-inicio"></i>Inicio</a></li>
+	      <li class="submenu"><a href="proyectos.html"><span class="segundo"><i class="icon icon-proyecto"></i></span>Proyectos</a>
+                <ul class="children">
+		<li><a href="CPU.html"><i class="icon-proyecto"></i>CPU </a></li>
+		<li><a href="MONITOR.html">Monitor</a></li>
+                <li><a href="USB.html">USB</a></li>
+		<li><a href="PORTATILES.html">Portatiles</a></li>
+                <li><a href="DISCODURO.html">Disco Duro</a></li>
+                <li><a href="PROGRAMAS.html">Programas</a></li>
+                <li><a href="CELULARES.html">Celulares</a></li>
+                <li><a href="SEMAFOROS.html">Semaforo</a></li>
+                </ul>
+		</li>
+              <li class="submenu"><a href="#"><span class="tercero"><i class="icon icon-comunidad"></i></span>Comunidad</a>  
+                  <ul class="children">
+		<li><a href="CULTURAL.html">Cultural </a></li>
+		<li><a href="SOCIAL.html">Social</a></li>
+                <li><a href="DEPORTIVO.html">Deportiva</a></li>
+		<li><a href="RELIGIOSO.html">Religiosa</a></li>
+                </ul>
+		</li>
+		<li><a href="novedades.html"><span class="cuarto"><i class="icon icon-novedad"></i></span>Novedades</a></li>
+		<li><a href="institucion.html"><span class="quinto"><i class="icon icon-instituto"></i></span>Institucion</a></li>
+            </ul>
+		</nav>
+<meta charset="utf-8">
+<title>Agrupar los links</title>
+<style>
+h1{
+	text-align:center;
+}
+p{
+	font-size:18px;
+	font-family:Verdana, Geneva, sans-serif;
+	text-align:justify;
+}
+#links {	
+	width: 20%;
+	margin-left:45px;
+	border:dashed #0000FF 2px;
+	float:left;
+	padding-bottom:200px;
+	padding-left:20px;
+}
+#links h2{
+	text-align:center;
+}
+#ultimos{	
+	width:75%;
+	float:left;
+}
+li{
+	font-weight:bold;
+	font-size:18px;
+}
+</style>
+</head>
+<html>
+<title>Trabajando con eventos - Tip simple</title>
+<style type="text/css">
+   .tip{
+      background-color: #ffcc99;
+      padding: 10px;
+      display: none;
+      position: absolute;
+   }
+</style>
+<script src="../jquery-1.4.1.min.js"></script>
+<script>
+$(document).ready(function(){
+   $("#elemento1").mouseenter(function(e){
+      $("#tip1").css("left", e.pageX + 5);
+      $("#tip1").css("top", e.pageY + 5);
+      $("#tip1").css("display", "block");
+   });
+   $("#elemento1").mouseleave(function(e){
+      $("#tip1").css("display", "none");
+   });
+   
+   $("#elemento2").mouseenter(function(e){
+      $("#tip2").css("left", e.pageX + 5);
+      $("#tip2").css("top", e.pageY + 5);
+      $("#tip2").css("display", "block");
+   });
+   $("#elemento2").mouseleave(function(e){
+      $("#tip2").css("display", "none");
+   });
+})
+</script>
+<body>
+<h1>Trabajando con eventos en jQuery</h1>
+<h1>
+Categorías: Eventos De Ratones
+.mouseleave (handler)</h1>
+<h2>Descripción: Vincule un controlador de eventos para que se dispare cuando el mouse abandona un elemento o desencadenar ese controlador en un elemento.</h2>   
+   <div id="elemento1" style="background-color: #ccccff; padding: 5px;">Pasa el ratón por encima de este "elemento1".</div>
+   <p>
+      Este texto es para poner <a id="elemento2" href="#">otro elemento con tip</a>.
+   </p>
+   
+   <div class="tip" id="tip1">Esto es para explicar algo sobre el elemento1</div>
+   <div class="tip" id="tip2">Explico mejor este otro elemento con tip!!</div>
+</body>
+</html>

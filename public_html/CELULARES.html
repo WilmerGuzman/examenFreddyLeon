@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+    
+<head>
+ <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="fonts.css">
+    <link rel="icon" href="img/icono.ico">
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="main.js"></script>
+        <script src="JS/jquery-3.2.1.js"></script>
+    <div class="menu_bar">
+			<a href="index.html" class="bt-menu"><span class="icon-list2"></span>Men�</a>
+		</div>
+    		<nav>
+                 <ul>
+              <li><a href="index.html"><i class="icon icon-inicio"></i>Inicio</a></li>
+	      <li class="submenu"><a href="proyectos.html"><span class="segundo"><i class="icon icon-proyecto"></i></span>Proyectos</a>
+                <ul class="children">
+		<li><a href="CPU.html"><i class="icon-proyecto"></i>CPU </a></li>
+		<li><a href="MONITOR.html">Monitor</a></li>
+                <li><a href="USB.html">USB</a></li>
+		<li><a href="PORTATILES.html">Portatiles</a></li>
+                <li><a href="DISCODURO.html">Disco Duro</a></li>
+                <li><a href="PROGRAMAS.html">Programas</a></li>
+                <li><a href="CELULARES.html">Celulares</a></li>
+                <li><a href="SEMAFOROS.html">Semaforo</a></li>
+                </ul>
+		</li>
+              <li class="submenu"><a href="#"><span class="tercero"><i class="icon icon-comunidad"></i></span>Comunidad</a>  
+                  <ul class="children">
+		<li><a href="CULTURAL.html">Cultural </a></li>
+		<li><a href="SOCIAL.html">Social</a></li>
+                <li><a href="DEPORTIVO.html">Deportiva</a></li>
+		<li><a href="RELIGIOSO.html">Religiosa</a></li>
+                </ul>
+		</li>
+		<li><a href="novedades.html"><span class="cuarto"><i class="icon icon-novedad"></i></span>Novedades</a></li>
+		<li><a href="institucion.html"><span class="quinto"><i class="icon icon-instituto"></i></span>Institucion</a></li>
+            </ul>
+		</nav>
+</head>
+<meta charset="utf-8">
+
+<style>
+#titulo{
+	margin-left:150px;
+	}
+	#foto p{
+		background-color:#CCC;
+		color:#0F6;
+		font-size:24px;
+		text-align:center;
+		font-weight:bold;
+		width:300px;
+		}
+	h1{
+		text-aling:center;
+		}
+</style>
+<script src="JS/jquery-3.2.1.js"></script>
+<script>
+$(document).ready(function(){
+	$("#titulo").hide();
+	$("#foto img").width(60).height(40).click(function(){
+	$(this).animate({
+		marginLeft:"150px",
+		width:"300px",
+		height:"200px"
+		},1500,function(){
+			$("#titulo").fadeIn(1000).delay(1000).fadeOut(1000);
+		}).delay(3000);//termina la animacion
+		$(this).animate({
+			marginLeft:"0px",
+			width:"60px",
+			height:"40px"
+		},1500);//termina el animate 2
+	});//termina la funcion click
+});//termina el ready
+</script>
+<body>
+<h1>
+    El metodo delay()<h1><h3> de jQuery sirve para generar un intervalo de espera entre la ejecucion de funciones de la cola de efectos.
+El metodo delay() es otro de los que algun dia, y quizas sea temprano, querras aprender a utilizar para generar una pausa entre la ejecucion de funciones que se encuentran en la cola de efectos.
+
+Es tan sencillo como invocarlo indicando como parametro el numero de milisegundos que deseas que se espere entre una y otra llamada a las funciones encoladas en la cola de efectos, pero aunque sea bastante obvio, quizas estara bien ofrecer algunas notas sobre su funcionamiento
+</h3>
+<div id="foto">
+<img src="img/CELULAR.jpg" width="300" height="200" id="imagen1">
+	<p id="titulo">pie de foto</p>
+    </div>
+</body>
+</html>

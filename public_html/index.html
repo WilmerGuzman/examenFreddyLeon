@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--Revista digital Rancla Colectiva -->
+<html>
+    <head>
+	<meta charset="UTF-8">
+	<title>EXAMEN ING. FREDDY LEON</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="fonts.css">
+    <link rel="icon" href="img/icono.ico">
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="main.js"></script>
+        <script src="JS/jquery-3.2.1.js"></script>
+<script>
+$(document).ready(function(){
+	var elementos=document.querySelectorAll("img")
+	for(var i=0;i<elementos.length;i++){
+		elementos[i].addEventListener("mouseover",cambiar,false);
+		elementos[i].addEventListener("mouseout",cambiar2,false);
+		}
+	});
+function cambiar(e){
+if(e.target==foto1){
+	$("#foto1").attr("src","img/index/uno.png");
+	}else if(e.target==foto2){
+	$("#foto2").attr("src","img/index/articulo1.jpg");
+	}else if(e.target==foto3){
+	$("#foto3").attr("src","img/index/articulo1.jpg");
+	}else if(e.target==foto4){
+	$("#foto4").attr("src","img/index/articulo1.jpg");
+	}
+}
+function cambiar2(e){
+if(e.target==foto1){
+	$("#foto1").attr("src","img/index/articulo1.jpg");
+	}else if(e.target==foto2){
+	$("#foto2").attr("src","img/index/slide2.png");
+	}else if(e.target==foto3){
+	$("#foto3").attr("src","img/index/slide3.png");
+	}else if(e.target==foto4){
+	$("#foto4").attr("src","img/index/slide4.png");
+	}
+}
+</script>
+</head>
+<body>
+
+      
+<header>
+                <div class="slider">
+                <ul>
+                	<li><img src="img/index/uno.png" alt="" id="foto"></li>
+                    <li><img src="img/index/slide2.png" alt="" id="foto2"></li>
+                    <li><img src="img/index/slide3.png" alt="" id="foto3"></li>
+                    <li><img src="img/index/slide4.png" alt="" id="foto4"></li>               
+                </ul>
+            <div/>
+            <div class="logo"><img src="img/logo.png" alt="Rancla colectiva"><div/>
+        </header>
+    
+    <div class="menu_bar">
+			<a href="index.html" class="bt-menu"><span class="icon-list2"></span>Menú</a>
+		</div>
+    		<nav>
+                 <ul>
+              <li><a href="index.html"><i class="icon icon-inicio"></i>Inicio</a></li>
+	      <li class="submenu"><a href="proyectos.html"><span class="segundo"><i class="icon icon-proyecto"></i></span>Proyectos</a>
+                <ul class="children">
+		<li><a href="CPU.html"><i class="icon-proyecto"></i>CPU </a></li>
+		<li><a href="MONITOR.html">Monitor</a></li>
+                <li><a href="USB.html">USB</a></li>
+		<li><a href="PORTATILES.html">Portatiles</a></li>
+                <li><a href="DISCODURO.html">Disco Duro</a></li>
+                <li><a href="social.html">Programas</a></li>
+                <li><a href="social.html">Celulares</a></li>
+                <li><a href="social.html">Semaforo</a></li>
+                </ul>
+		</li>
+              <li class="submenu"><a href="#"><span class="tercero"><i class="icon icon-comunidad"></i></span>Comunidad</a>  
+                  <ul class="children">
+		<li><a href="CULTURAL.html">Cultural </a></li>
+		<li><a href="SOCIAL.html">Social</a></li>
+                <li><a href="DEPORTIVO.html">Deportiva</a></li>
+		<li><a href="RELIGIOSO.html">Religiosa</a></li>
+                </ul>
+		</li>
+		<li><a href="novedades.html"><span class="cuarto"><i class="icon icon-novedad"></i></span>Novedades</a></li>
+		<li><a href="institucion.html"><span class="quinto"><i class="icon icon-instituto"></i></span>Institucion</a></li>
+            </ul>
+		</nav>
+        <section id="contenedor" width=200%">
+            <section id="principal">
+                <article>
+                	<img src="img/index/articulo1.jpg" width="100%" height="100%" alt="Reconocimiento facial"id="foto1">
+                    <h2>EVENTO MOUSEOUT&&EVENTO MOUSEOVER</h2>
+                    <em>Evento mouseout: Se dispara cuando el mouse sale del control que esta escuchando el evento. Pero es diferente al mouseleave, en este caso el evento se dispara si algún elemento hijo del mismo dispara el mouseout.
+</em></br>
+                    </br>
+                    </br>
+                    <p>Evento mouseover: Se dispara cuando el mouse se encuentra dentro del control que esta escuchando el evento, es decir, el puntero entra al control y se ejecuta, pero mientras el puntero este adentro del control y lo mueva se vuelve a ejecutar. Hay que destacar la diferencia con el evento mouseenter, ya que el ultimo solo se ejecuta una vez, en cambio el mouseover cuantas veces me mueva dentro del control.
+
+
+                    </br></br><hr style="color:blue"/></p>
+                </article>
+                <section>
+                </br>
+                    <article class="artitres">
+                    	<img src="img/index/slide2.png" width="100%" height="100%" alt="Escuela de pueblo">
+                        
+                    	<h3><a href="#">Estudiantes del Instituto Tecnologico Superior Limon</a></h3>
+                    	<em>AUTOR:</em><i> Ing. freddy Leon</i>
+                    	</br>
+                    	<p>El plantel cuenta con dos especialidades, la primera con dos años Tecnico en contabilidad en Costos
+                            con 3 años Tecnologo en Analisis de Sistemas.</p>
+                    	</br>
+                	</article>
+                    <article class="artitres">
+                    	<img src="img/index/uno.png" width="100%" height="100%" alt="INSTITUTO LIMON">
+                    	<h3><a href="#">LIMON INDANZA PRESENTE</a></h3>
+                    	<em>Nombre Autor</em><i> Fecha Publicación</i>
+                    	</br>
+                    	<p>Castilla y León, con los mejores resultados en PISA, tiene a la mitad del alumnado de infantil y primaria en colegios rurales.</p>
+                    	</br>
+                	</article>
+                    <article class="artitres">
+                    	<img src="img/index/uno.png" width="100%" height="100%" alt="Escuela de pueblo">
+                    	<h3><a href="#">Pocos niños y maestros cercanos, el secreto de una escuela de pueblo</a></h3>
+                    	<em>Nombre Autor</em><i> Fecha Publicación</i>
+                    </br>
+                    <p>Castilla y León, con los mejores resultados en PISA, tiene a la mitad del alumnado de infantil y primaria en colegios rurales.</p>
+                    </br>
+                	</article>
+                </section>
+            </section>
+            <aside>
+            <div class="redes">
+             
+               <ul>
+             <li><a href = "https://www.facebook.com/" target="_blank" class="icon-facebook2"></a></li>
+             <li><a href = "https://www.youtube.com"target="_blank" class="icon-youtube"></a></li>
+             <li><a href = "https://web.whatsapp.com" target="_blank" class="icon-whatsapp"></a></li>
+             <li><a href = "https://twitter.com" target="_blank" class="icon-twitter"></a></li>
+             <li><a href = "https://www.hotmail.com" target="_blank" class="icon-mail"></a></li>
+                                 
+                </ul>
+                <div/>
+            </aside>
+        </section>
+        <footer id="contenedorpie">
+        <div class="fcontenedor">
+            <article class="farti">
+					<h4>Paginas relacionadas</h4></br><div class="pie">www.tecnologicolimon.edu.ec</div>
+            </article>
+            <article class="farti">
+                    <h4>Contactos</h4></br><div class="pie"><span class="icon-facebook"></span> facebook.com </br><span class="icon-twitter"></span> twiter.com</div>
+            </article>
+            <article class="farti">
+                    <h4>Politicas de anuncios</h4></br><div class="pie">www.tecnologicolimon.edu.ec</div>
+            </article>
+            <article class="farti">
+                    <h4>categorias</h4></br><div class="pie">www.tecnologicolimon.edu.ec</div>
+			</article>
+        </div>
+            </body>
+        </footer>
+    
+</html>

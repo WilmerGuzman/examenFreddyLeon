@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="fonts.css">
+    <link rel="icon" href="img/icono.ico">
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="main.js"></script>
+        <script src="JS/jquery-3.2.1.js"></script>
+    <div class="menu_bar">
+			<a href="index.html" class="bt-menu"><span class="icon-list2"></span>Menú</a>
+		</div>
+    		<nav>
+                 <ul>
+              <li><a href="index.html"><i class="icon icon-inicio"></i>Inicio</a></li>
+	      <li class="submenu"><a href="proyectos.html"><span class="segundo"><i class="icon icon-proyecto"></i></span>Proyectos</a>
+                <ul class="children">
+		<li><a href="CPU.html"><i class="icon-proyecto"></i>CPU </a></li>
+		<li><a href="MONITOR.html">Monitor</a></li>
+                <li><a href="USB.html">USB</a></li>
+		<li><a href="PORTATILES.html">Portatiles</a></li>
+                <li><a href="DISCODURO.html">Disco Duro</a></li>
+                <li><a href="PROGRAMAS.html">Programas</a></li>
+                <li><a href="CELULARES.html">Celulares</a></li>
+                <li><a href="SEMAFOROS.html">Semaforo</a></li>
+                </ul>
+		</li>
+              <li class="submenu"><a href="#"><span class="tercero"><i class="icon icon-comunidad"></i></span>Comunidad</a>  
+                  <ul class="children">
+		<li><a href="CULTURAL.html">Cultural </a></li>
+		<li><a href="SOCIAL.html">Social</a></li>
+                <li><a href="DEPORTIVO.html">Deportiva</a></li>
+		<li><a href="RELIGIOSO.html">Religiosa</a></li>
+                </ul>
+		</li>
+		<li><a href="novedades.html"><span class="cuarto"><i class="icon icon-novedad"></i></span>Novedades</a></li>
+		<li><a href="institucion.html"><span class="quinto"><i class="icon icon-instituto"></i></span>Institucion</a></li>
+            </ul>
+		</nav>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Cambiar Estilos</title>
+<style>
+#PrimerParrafo{
+	 background-color:red;
+}
+</style>
+<script src="JS/jquery-3.2.1.js"></script>
+<script>
+ 	$(document).ready(function() {
+	var colorFondo=$("#PrimerParrafo").css("background-color");
+	alert (colorFondo);
+	});
+	</script>
+</head>
+    <h1>Atributo color visualizando en un alert</h1><h2>
+El atributo color define el color del texto del documento (no se debe confundir con el color de background) tanto mediante los nombres de los colores en inglés (black, silver, gray, white, maroon, red, purple, fuchsia, green, lime, olive, yellow, navy, blue, teal y aqua) como con tríos hexadecimales.
+El formato RGB usa para definir los colores tres números enteros comprendidos entre 0 y 255, mediante una escala de valores lineal. </h2><h1>El rojo es así, por tanto, 255,0,0 </h1><h2>y los matices cromáticos se realizan a través de las combinaciones de colores.
+En HTML los valores númericos de los colores se definen según el denominado "trío hexadecimal", o sea un conjunto de tres números y dos cifras hexadecimales.<h2/>
+<body>
+<p id="PrimerParrafo">Primer Parrafo</p>
+<p class="Destacado">Segundo Parrafo</p>
+<p> Tercer Parrafo </p>
+
+
+</body>
+</html>

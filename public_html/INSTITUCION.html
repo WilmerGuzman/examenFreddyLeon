@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="fonts.css">
+    <link rel="icon" href="img/icono.ico">
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="main.js"></script>
+        <script src="JS/jquery-3.2.1.js"></script>
+    <div class="menu_bar">
+			<a href="index.html" class="bt-menu"><span class="icon-list2"></span>Menú</a>
+		</div>
+    		<nav>
+                 <ul>
+              <li><a href="index.html"><i class="icon icon-inicio"></i>Inicio</a></li>
+	      <li class="submenu"><a href="proyectos.html"><span class="segundo"><i class="icon icon-proyecto"></i></span>Proyectos</a>
+                <ul class="children">
+		<li><a href="CPU.html"><i class="icon-proyecto"></i>CPU </a></li>
+		<li><a href="MONITOR.html">Monitor</a></li>
+                <li><a href="USB.html">USB</a></li>
+		<li><a href="PORTATILES.html">Portatiles</a></li>
+                <li><a href="DISCODURO.html">Disco Duro</a></li>
+                <li><a href="PROGRAMAS.html">Programas</a></li>
+                <li><a href="CELULARES.html">Celulares</a></li>
+                <li><a href="SEMAFOROS.html">Semaforo</a></li>
+                </ul>
+		</li>
+              <li class="submenu"><a href="#"><span class="tercero"><i class="icon icon-comunidad"></i></span>Comunidad</a>  
+                  <ul class="children">
+		<li><a href="CULTURAL.html">Cultural </a></li>
+		<li><a href="SOCIAL.html">Social</a></li>
+                <li><a href="DEPORTIVO.html">Deportiva</a></li>
+		<li><a href="RELIGIOSO.html">Religiosa</a></li>
+                </ul>
+		</li>
+		<li><a href="novedades.html"><span class="cuarto"><i class="icon icon-novedad"></i></span>Novedades</a></li>
+		<li><a href="INSTITUCION.html"><span class="quinto"><i class="icon icon-instituto"></i></span>Institucion</a></li>
+            </ul>
+		</nav>
+<meta charset="UTF-8">
+<title>Next</title>
+<style>
+h3 {
+	background: url(file:///H|/IMG/abre.png) no-repeat 0 11px;
+	padding: 10px 0 0 25px;
+	cursor: pointer;
+}
+h3.cerrar {
+	background-image: url(file:///H|/IMG/cierra.png);
+}
+.respuesta {
+	margin-left: 25px;	
+}
+.titulo{
+	text-align:center;
+}
+.principal{
+	margin-left:200px;
+	margin-top:150px;
+}
+</style>
+<script src="JS/jQuery1.6.3.js"></script>
+
+<script>
+ $(document).ready(function(){
+     $(".respuesta").hide();
+	 $(".principal h3").toggle(function(){
+		 $(this).next(".respuesta").fadeIn();
+	
+	 },function(){
+     
+	 		 $(this).next(".respuesta").fadeOut();
+	 
+ 
+ });
+ });
+ 
+ 
+</script>
+</head>
+<body>
+<div class="principal">
+    <h1>El método toggle () alterna entre hide () y show () para los elementos seleccionados.
+
+Este método comprueba la visibilidad de los elementos seleccionados. show () se ejecuta si un elemento está oculto. hide () se ejecuta si un elemento es visible - Esto crea un efecto de conmutación. </h1>
+	<h2>Cuestionario</h2>
+<h3>¿1.	Que es JQuery?</h3>
+    <div class="respuesta">
+    <p>Es una librería en javaScript que nos ayuda en la creación de tareas frecuentes a la hora de programar en java Scritp </p>
+    </div>
+      <h3>¿2. Nombre 1 característica de JQuery?</h3>
+      <div class="respuesta">
+        <p>Altamente testeada: Ósea es muy raro encontrar un fallo en una librería.</p>
+      </div>
+      <h3>¿3. Que es el DOM?</h3>
+      <div class="respuesta">
+        <p>Document Object Model (Modelos de Objetos del Documento)</p>
+</div>
+ <h3>¿4. Cuál es la sintaxis para seleccionar una id en Jquery?</h3>
+      <div class="respuesta">
+        <p>document.getElementById().</p>
+</div>
+</body>
+</html>

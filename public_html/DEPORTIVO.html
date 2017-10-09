@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="fonts.css">
+    <link rel="icon" href="img/icono.ico">
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="main.js"></script>
+        <script src="JS/jquery-3.2.1.js"></script>
+    <div class="menu_bar">
+			<a href="index.html" class="bt-menu"><span class="icon-list2"></span>Menú</a>
+		</div>
+    		<nav>
+                 <ul>
+              <li><a href="index.html"><i class="icon icon-inicio"></i>Inicio</a></li>
+	      <li class="submenu"><a href="proyectos.html"><span class="segundo"><i class="icon icon-proyecto"></i></span>Proyectos</a>
+                <ul class="children">
+		<li><a href="CPU.html"><i class="icon-proyecto"></i>CPU </a></li>
+		<li><a href="MONITOR.html">Monitor</a></li>
+                <li><a href="USB.html">USB</a></li>
+		<li><a href="PORTATILES.html">Portatiles</a></li>
+                <li><a href="DISCODURO.html">Disco Duro</a></li>
+                <li><a href="PROGRAMAS.html">Programas</a></li>
+                <li><a href="CELULARES.html">Celulares</a></li>
+                <li><a href="SEMAFOROS.html">Semaforo</a></li>
+                </ul>
+		</li>
+              <li class="submenu"><a href="#"><span class="tercero"><i class="icon icon-comunidad"></i></span>Comunidad</a>  
+                  <ul class="children">
+		<li><a href="CULTURAL.html">Cultural </a></li>
+		<li><a href="SOCIAL.html">Social</a></li>
+                <li><a href="DEPORTIVO.html">Deportiva</a></li>
+		<li><a href="RELIGIOSO.html">Religiosa</a></li>
+                </ul>
+		</li>
+		<li><a href="novedades.html"><span class="cuarto"><i class="icon icon-novedad"></i></span>Novedades</a></li>
+		<li><a href="institucion.html"><span class="quinto"><i class="icon icon-instituto"></i></span>Institucion</a></li>
+            </ul>
+		</nav>
+<meta charset="utf-8">
+<title>galeria</title>
+<style>
+	table{
+		text-align:center;
+		width:50%;
+		border:none;
+		margin:auto;
+		}
+	img{
+		padding:0 5px;
+		}
+</style>
+<script src="JS/jquery-3.2.1.js"></script>
+<script>
+$(document).ready(function(){
+	document.getElementById("miboton").addEventListener("click", cambiar, false);
+	});
+function cambiar(){
+		$("img").each(function(){
+		$(this).fadeOut(1000).fadeIn(1000).width("320");
+	});
+}
+</script>
+</head>
+<body>
+<div id="contenedor">
+
+<img src="img/foto7.jpg" width="200" >
+
+</div>
+<div id="boton">
+<input type="button" id="miboton" value="ejecutar accion">
+</div>
+    <h1>Sintaxis de jQuery fadeIn()
+
+El efecto fadeIn() muestra un elemento (anteriormente oculto) cambiando su opacidad</h1>
+    <h1>Sintaxis de jQuery fadeOut()
+
+El efecto fadeOut() oculta un elemento variando su opacidad</h1>
+</body>
+</html>
